@@ -1,4 +1,4 @@
-const domainURL = 'https://ticketing.eventtus.com';
+const domainURL = 'https://ticketing.gravityeventtus.com';
 
 function eventtusWidget() {
   const closeWidget = () => {
