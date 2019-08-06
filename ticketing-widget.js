@@ -38,7 +38,7 @@ function eventtusWidget() {
       document.body.style.overflow = "hidden";
       document.body.style.height = "auto";
       document.querySelectorAll('body > *').forEach(function (elm) { elm.style.display = 'none' });
-      document.getElementById('#').style.display = 'block'
+      document.getElementById('eventtusWidgetFrame').style.display = 'block'
     } catch (err) {
       window.open(domainURL + '/' + eventId + '/tickets', '_blank');
       return err;
