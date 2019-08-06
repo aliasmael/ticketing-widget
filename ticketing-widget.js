@@ -1,4 +1,5 @@
 const domainURL = 'https://ticketing.staging.eventtus.com';
+const iOS = Boolean(navigator.platform) && /iPad|iPhone|iPod/.test(navigator.platform);
 
 function eventtusWidget() {
   const closeWidget = () => {
@@ -7,7 +8,10 @@ function eventtusWidget() {
     // Reset overflow and height to initial state
     document.body.style.overflow = "initial";
     document.body.style.height = null;
-    document.querySelectorAll('body > *').forEach(function (elm) { elm.style.display = 'block' });
+    
+    if (iOS) {
+      document.querySelectorAll('body > *').forEach(function (elm) { elm.style.display = 'block' });
+    }
   };
 
   const showLoader = () => {
@@ -37,8 +41,11 @@ function eventtusWidget() {
       // Fix scrolling issue with iframe
       document.body.style.overflow = "hidden";
       document.body.style.height = "auto";
-      document.querySelectorAll('body > *').forEach(function (elm) { elm.style.display = 'none' });
-      document.getElementById('eventtusWidgetFrame').style.display = 'block'
+      
+      if (iOS) {
+        document.querySelectorAll('body > *').forEach(function (elm) { elm.style.display = 'none' });
+        document.getElementById('eventtusWidgetFrame').style.display = 'block';
+      }
     } catch (err) {
       window.open(domainURL + '/' + eventId + '/tickets', '_blank');
       return err;
