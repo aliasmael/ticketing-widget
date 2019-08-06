@@ -46,9 +46,9 @@ function eventtusWidget() {
       // Fix scrolling issue with iframe
       document.body.style.overflow = "hidden";
       document.body.style.height = "auto";
+      document.cookie = 'ali=ismael';
       
       if (iOS) {
-        document.cookie = 'ali=ismael';
         iframe.style.position = 'relative';
         document.querySelectorAll('body > *').forEach(function (elm) { elm.style.display = 'none' });
         document.getElementById('eventtusWidgetFrame').style.display = 'block';
