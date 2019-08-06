@@ -48,6 +48,7 @@ function eventtusWidget() {
       document.body.style.height = "auto";
       
       if (iOS) {
+        document.cookie = 'ali=ismael';
         iframe.style.position = 'relative';
         document.querySelectorAll('body > *').forEach(function (elm) { elm.style.display = 'none' });
         document.getElementById('eventtusWidgetFrame').style.display = 'block';
