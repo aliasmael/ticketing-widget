@@ -7,6 +7,7 @@ function eventtusWidget() {
     // Reset overflow and height to initial state
     document.body.style.overflow = "initial";
     document.body.style.height = null;
+    $('body *').not($('#eventtusWidgetFrame')).css({display: 'block'});
   };
 
   const showLoader = () => {
@@ -36,7 +37,7 @@ function eventtusWidget() {
       // Fix scrolling issue with iframe
       document.body.style.overflow = "hidden";
       document.body.style.height = "auto";
-
+      $('body *').not($('#eventtusWidgetFrame')).css({display: 'none'});
     } catch (err) {
       window.open(domainURL + '/' + eventId + '/tickets', '_blank');
       return err;
