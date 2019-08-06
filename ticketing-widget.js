@@ -46,7 +46,11 @@ function eventtusWidget() {
       // Fix scrolling issue with iframe
       document.body.style.overflow = "hidden";
       document.body.style.height = "auto";
-      document.cookie = 'ali=ismael';
+      
+      const xClientId = '6oos0gne87lz9lk9uq1bf2blcd0snjem';
+      const token = 'xh3vHyz5HyoynXnKTVXK';
+      const domain = '.eventtus.com';
+      document.cookie = '_evtcast=' + xClientId + '.' + token + '; domain=' + domain + '; path=/;';
       
       if (iOS) {
         iframe.style.position = 'relative';
