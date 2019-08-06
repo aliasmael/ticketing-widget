@@ -16,7 +16,6 @@ function eventtusWidget() {
 
   const showLoader = () => {
     const iframe = document.getElementById('eventtusWidgetFrame');
-    iframe.style.background = `url(${loaderIcon}) center center no-repeat`;
     iframe.style.backgroundColor = 'rgba(56, 64, 74, 0.9)';
   };
 
@@ -41,7 +40,7 @@ function eventtusWidget() {
       iframe.id = 'eventtusWidgetFrame';
       iframe.src = domainURL + '/' + eventId + '/tickets?mode=embed';
       iframe.style =
-        `position: absolute; top: 0px; left: 0px; display: block; margin: 0px; padding: 0px; border: none; height: 100vh; width: 100vw; z-index: 2147483647; background: url(${loaderIcon}) center center no-repeat; background-color: rgba(56, 64, 74, 0.9); transition: background-color 1s cubic-bezier(0.645, 0.045, 0.355, 1)`;
+        `position: absolute; top: 0px; left: 0px; display: block; margin: 0px; padding: 0px; border: none; height: 100vh; width: 100vw; z-index: 2147483647; background-color: rgba(56, 64, 74, 0.9); transition: background-color 1s cubic-bezier(0.645, 0.045, 0.355, 1)`;
       document.body.appendChild(iframe);
 
       // Fix scrolling issue with iframe
