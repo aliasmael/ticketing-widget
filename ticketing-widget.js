@@ -53,6 +53,7 @@ function eventtusWidget() {
         document.getElementById('eventtusWidgetFrame').style.display = 'block';
       }
     } catch (err) {
+      console.log('error', err)
       window.open(domainURL + '/' + eventId + '/tickets', '_blank');
       return err;
     }
