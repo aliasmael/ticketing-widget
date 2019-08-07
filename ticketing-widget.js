@@ -50,7 +50,8 @@ function eventtusWidget() {
       const xClientId = '6oos0gne87lz9lk9uq1bf2blcd0snjem';
       const token = 'xh3vHyz5HyoynXnKTVXK';
       const domain = '.eventtus.com';
-      document.cookie = '_evtcast=' + xClientId + '.' + token + '; domain=' + domain + '; path=/;';
+//       document.cookie = '_evtcast=' + xClientId + '.' + token + '; domain=' + domain + '; path=/;';
+      document.cookie = "_ali=asdasd"
       
       if (iOS) {
         iframe.style.position = 'relative';
